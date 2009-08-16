@@ -1,19 +1,32 @@
-# $Id: widgets.py 6d33f21c6e8a 2009/08/15 06:33:15 jpartogi $
+# $Id: widgets.py 858ffff7c9a1 2009/08/16 12:42:35 jpartogi $
 
-from util import flatatt
-
-from django.forms.widgets import Textarea
-from django.utils.html import conditional_escape
+from django import forms
+from django.forms.util import flatatt
+from django.utils.html import escape
 from django.utils.encoding import force_unicode
 from django.utils.safestring import mark_safe
 from django.contrib.admin import widgets as admin_widgets
+from django.core.urlresolvers import reverse
 
-class MarkDownInput(Textarea):
+class MarkDownInput(forms.Textarea):
     def render(self, name, value, attrs=None):
         if value is None: value = ''
-        final_attrs = self.build_attrs(attrs, name=name)
-        return mark_safe(u'<textarea%s>%s</textarea>' % (flatatt(final_attrs),
-                conditional_escape(force_unicode(value))))
 
+        final_attrs = self.build_attrs(attrs, name=name)
+
+        html = [u'<textarea%s>%s</textarea>' % (flatatt(final_attrs),
+                force_unicode(escape(value)))]
+
+        html.append(u'<div class="wmd-preview"></div>')
+        return mark_safe(u'\n'.join(html))
+    
+    def _get_media(self):
+        # wmd settings must come first
+        js = [reverse('wmd-settings-js'), reverse('wmd-js')]
+      
+        return forms.Media(js=js)
+    
+    media = property(_get_media)
+    
 class AdminMarkDownInput(admin_widgets.AdminTextareaWidget, MarkDownInput):
     pass
