@@ -1,4 +1,4 @@
-# $Id: setup.py d4ce2551f91d 2009/08/22 13:00:06 jpartogi $
+# $Id: setup.py 367a51c79b19 2009/08/22 13:58:55 jpartogi $
 #!/usr/bin/env python
 
 from distutils.core import setup
@@ -17,7 +17,7 @@ setup(name='django-%s-editor' % app_name,
         license = "BSD License",
         keywords = "django wmd editor",
         classifiers = [
-            'Development Status :: 5 - Production/Stable',
+            'Development Status :: 3 - Alpha',
             'Environment :: Web Environment',
             'Framework :: Django',
             'Intended Audience :: Developers',
