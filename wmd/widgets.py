@@ -1,4 +1,4 @@
-# $Id: widgets.py 858ffff7c9a1 2009/08/16 12:42:35 jpartogi $
+# $Id: widgets.py cbfb8c2202d7 2009/08/22 07:52:56 jpartogi $
 
 from django import forms
 from django.forms.util import flatatt
@@ -23,8 +23,10 @@ class MarkDownInput(forms.Textarea):
     def _get_media(self):
         # wmd settings must come first
         js = [reverse('wmd-settings-js'), reverse('wmd-js')]
+
+        css = dict(screen = [reverse('wmd-css')])
       
-        return forms.Media(js=js)
+        return forms.Media(js=js, css=css)
     
     media = property(_get_media)
     
