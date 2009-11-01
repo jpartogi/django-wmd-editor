@@ -137,7 +137,7 @@ var _30=_6.makeElement("span");
 _2b=_30.style;
 _2b.height="100%";
 _2b.width=_2a;
-_2b.filter="progid:DXImageTransform.Microsoft."+"AlphaImageLoader(src='"+_2.basePath+"images/bg.png')";
+//_2b.filter="progid:DXImageTransform.Microsoft."+"AlphaImageLoader(src='"+_2.basePath+"images/bg.png')";
 _2b.position="absolute";
 if(_2e&1){
 _2b.top="0";
@@ -176,7 +176,7 @@ var _34=_6.makeElement("span");
 _2b=_34.style;
 _2b.height="100%";
 _2b.width=_2a;
-_2b.filter="progid:DXImageTransform.Microsoft."+"AlphaImageLoader(src='"+_2.basePath+"images/bg-fill.png',sizingMethod='scale')";
+//_2b.filter="progid:DXImageTransform.Microsoft."+"AlphaImageLoader(src='"+_2.basePath+"images/bg-fill.png',sizingMethod='scale')";
 _2b.position="absolute";
 _33.appendChild(_34);
 if(_32){

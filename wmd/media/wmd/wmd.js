@@ -63,7 +63,7 @@ return _14;
 }
 }
 };
-Attacklab.basePath=_f("wmd.js")||"http://static.wmd-editor.com/v2/";
+Attacklab.basePath=_f("wmd.js")||"/media/wmd/";
 for(var f,i=0;f=_5[i];i++){
 _a(f,false);
 }

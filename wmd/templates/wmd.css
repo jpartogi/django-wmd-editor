@@ -3,3 +3,5 @@
 .wmd-preview code {margin-left: 7em; padding-left: 20px; }
 .wmd-preview p {line-height: 25px; }
 .wmd-preview blockquote { border-left: none; padding:0 !important; margin: 0 !important;}
+.wmd-preview h2 {margin-left: 5em; font:bolder 20px Helvetica; background: none; color:#333; letter-spacing:-.9px; }
+.wmd-preview hr {padding-left: 5em;}
