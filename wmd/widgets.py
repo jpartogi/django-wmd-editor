@@ -10,8 +10,8 @@ from django.contrib.admin import widgets as admin_widgets
 
 class MarkDownInput(forms.Textarea):
     class Media:
-        js = ('/wmd-settings.js', settings.MEDIA_URL + "/wmd/wmd.js")
-        css = dict(screen = ['/wmd.css'])
+        js = ('/wmd-settings/js/', settings.MEDIA_URL + "/wmd/wmd.js")
+        css = dict(screen = ['/wmd/css/'])
 
     def render(self, name, value, attrs=None):
         if value is None: value = ''
