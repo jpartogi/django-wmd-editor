@@ -57,10 +57,31 @@ You also need to add these line on your template to load up the wmd static files
 In the admin, these static files is loaded automatically.
 
 
+Configuration
+=============
+
+In your django settings file, use this configuration for setting up your django wmd editor
+* *WMD_OUTPUT*: The format sent to the server.  Use "Markdown" to return the markdown source.
+   Values: Markdown, HTML
+   Default: Markdown
+* *WMD_LINE_LENGTH*: Line wrapping length for lists, blockquotes, etc.
+   Default: 40
+* *WMD_BUTTONS*: The toolbar buttons.  Undo and redo get appended automatically.
+   Values: bold italic link blockquote code image ol ul heading hr |
+   Default: bold italic | link blockquote code image | ol ul heading hr
+* *WMD_SHOW_PREVIEW*: Whether to show the preview or not. This is the setting if you
+   use the wmd editor outside the admin.
+   Values: True, False
+   Default: False
+* *WMD_ADMIN_SHOW_PREVIEW*: Whether to show the preview in the admin or not.
+   Values: True, False
+   Default: False
+
 Bugs & Features
 ===============
 Just file it in the `issue tracker <http://github.com/scrum8/django-wmd-editor/issues>`_.
 
 License
 =======
-django-wmd-editor is Copyright © 2009 `Scrum8 <http://scrum8.com>`_ under BSD License, the same license django is using.
+django-wmd-editor is Copyright © 2009 `Scrum8 <http://scrum8.com>`_ under
+BSD License, the same license django is using.
