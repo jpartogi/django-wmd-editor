@@ -9,17 +9,17 @@ Installing django-wmd-editor should be really as easy as possible. To install
 django-wmd-editor all you need to do is just follow these steps:
 
 1. Get django-wmd-editor
- 1.1 Checkout django-wmd-editor from github
+1.1 Checkout django-wmd-editor from github
         ::
         $ git clone git://github.com/scrum8/django-wmd-editor.git
 
  **Note**: django-wmd-editor have not release a package yet. But we will soon.
 
 2. Install django-wmd-editor package to python site-packages
- 2.1 Install django-wmd-editor with this command:
+2.1 Install django-wmd-editor with this command:
         ::
         $ sudo python setup.py install
- 2.2 Or you can just symlink ~/django-wmd-editor/wmd to your python site packages
+2.2 Or you can just symlink ~/django-wmd-editor/wmd to your python site packages
 
 3. Install django-wmd-editor in your django application
     ::
