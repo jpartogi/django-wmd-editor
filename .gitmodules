@@ -1,0 +1,4 @@
+[submodule "textarea-resizer"]
+        path = wmd/media/wmd/textarea-resizer/
+        url = git@github.com:scrum8/mootools-textarea-resizer.git
+
