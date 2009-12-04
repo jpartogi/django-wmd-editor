@@ -27,7 +27,8 @@ class MarkDownInput(forms.Textarea):
 
     def _media(self):
         return forms.Media(css= dict(screen = [reverse('wmd-css')]),
-                           js=(reverse('wmd-settings-js'), settings.MEDIA_URL + "/wmd/wmd.js"))
+                           js=(reverse('wmd-settings-js'),
+                               settings.MEDIA_URL + "/wmd/wmd.js"))
 
     media = property(_media)
 
