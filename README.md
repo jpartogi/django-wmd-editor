@@ -1,5 +1,5 @@
 Django WMD Editor
------------------
+=================
 
 
 A [WMD-Editor][1] wrapper for django application.
@@ -30,12 +30,12 @@ django-wmd-editor all you need to do is just follow these steps:
 3. Install django-wmd-editor in your django application::
 
     INSTALLED_APPS = (
-        ...
-        wmd',
-        ...
+      ...
+      wmd',
+      ...
     )
 
-4. Symlink or copy ~/django-wmd-editor/media/wmd directory to where your `MEDIA_URL` directory is pointing to. django-wmd-editor will look for the /wmd path
+4. Symlink or copy `~/django-wmd-editor/media/wmd` directory to where your `MEDIA_URL` directory is pointing to. django-wmd-editor will look for the /wmd path
 
 
 Usage
@@ -54,11 +54,11 @@ Usage
     description = forms.CharField(widget=MarkDownInput())
 
 3. You also need to add these lines on your template to load up the wmd static files:
-
+   
     <head>
     {{ form.media }}
     </head>
-
+   
 - In the admin, these static files is loaded automatically.
 
 
