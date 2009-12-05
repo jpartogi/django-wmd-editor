@@ -9,25 +9,24 @@ Installing django-wmd-editor should be really as easy as possible. To install
 django-wmd-editor all you need to do is just follow these steps:
 
 1. Get django-wmd-editor
-1.1 Checkout the latest revision of django-wmd-editor from github
-::
+
+   1.1 Checkout the latest revision of django-wmd-editor from github::
 
         $ git clone git://github.com/scrum8/django-wmd-editor.git
 
-1.2 Or download the not so latest django-wmd-editor from github:
+   1.2 Or download the not so latest django-wmd-editor from github::
 
-http://github.com/scrum8/django-wmd-editor/downloads 
+       <http://github.com/scrum8/django-wmd-editor/downloads>_
 
 2. Install django-wmd-editor package to python site-packages
-2.1 Install django-wmd-editor with this command:
-::
+
+   2.1 Install django-wmd-editor with this command:::
 
         $ sudo python setup.py install
 
-2.2 Or you can just symlink ~/django-wmd-editor/wmd to your python site packages
+   2.2 Or you can just symlink ~/django-wmd-editor/wmd to your python site packages
 
-3. Install django-wmd-editor in your django application
-::
+3. Install django-wmd-editor in your django application::
 
     INSTALLED_APPS = (
      ...
@@ -41,28 +40,25 @@ http://github.com/scrum8/django-wmd-editor/downloads
 Usage
 -----
 
-#. In your models
-::
+1. In your models:::
 
     from wmd import models as wmd_models
 
     description = wmd_models.MarkDownField()
 
-#. In your forms
-::
+2. In your forms:::
 
     from wmd.widgets import MarkDownInput
 
     description = forms.CharField(widget=MarkDownInput())
 
-You also need to add these lines on your template to load up the wmd static files:
-::
+3. You also need to add these lines on your template to load up the wmd static files:::
 
     <head>
     {{ form.media }}
     </head>
 
-In the admin, these static files is loaded automatically.
+- In the admin, these static files is loaded automatically.
 
 
 Configuration
