@@ -1,12 +1,8 @@
-# use glob syntax.
-syntax: glob
-
 *.iml
 *.ipr
 *.iws
 *.elc
 *.pyc
-*~
 
 nbproject/*
 wmd/media/textarea-resizer
