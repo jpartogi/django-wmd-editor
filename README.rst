@@ -1,10 +1,15 @@
-django-wmd-editor
-=================
+-----------------
+Django WMD Editor
+-----------------
+
 
 A `WMD-Editor <http://wmd-editor.com>`_ wrapper for django application.
 
+
+------------
 Installation
 ------------
+
 Installing django-wmd-editor should be really as easy as possible. To install
 django-wmd-editor all you need to do is just follow these steps:
 
@@ -35,6 +40,7 @@ django-wmd-editor all you need to do is just follow these steps:
 4. Symlink or copy ~/django-wmd-editor/media/wmd directory to where your MEDIA_URL directory is pointing to. django-wmd-editor will look for the /wmd path
 
 
+-----
 Usage
 -----
 
@@ -59,6 +65,7 @@ Usage
 - In the admin, these static files is loaded automatically.
 
 
+-------------
 Configuration
 -------------
 
@@ -80,10 +87,16 @@ In your django settings file, use this configuration for setting up your django 
    Values: True, False
    Default: False
 
+
+---------------
 Bugs & Features
 ---------------
+
 Just file it in the `issue tracker <http://github.com/scrum8/django-wmd-editor/issues>`_.
 
+
+-------
 License
 -------
+
 django-wmd-editor is Copyright © 2009 `Scrum8 <http://scrum8.com>`_ under BSD License, the same license django is using.
