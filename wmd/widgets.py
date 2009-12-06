@@ -1,5 +1,6 @@
 from django import forms
 from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.forms.util import flatatt
 from django.utils.html import escape
 from django.utils.encoding import force_unicode
@@ -9,6 +10,7 @@ from django.contrib.admin import widgets as admin_widgets
 from wmd import settings as wmd_settings
 
 class MarkDownInput(forms.Textarea):
+
     class Media:
         js = ('/wmd-settings/js/', settings.MEDIA_URL + "/wmd/wmd.js")
         css = dict(screen = ['/wmd/css/'])

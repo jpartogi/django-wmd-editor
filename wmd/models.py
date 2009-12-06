@@ -13,4 +13,11 @@ class MarkDownField(models.TextField):
             defaults['widget'] = wmd_widgets.AdminMarkDownInput
         
         return super(MarkDownField, self).formfield(**defaults)
-    
+
+class Config(models.Model):
+    key         = models.CharField(max_length=50, editable=False)
+    value       = models.CharField(max_length=100)
+    description = models.TextField(editable=False)
+
+    def __unicode__(self):
+        return self.key

@@ -20,7 +20,7 @@ def wmd_settings_js(request):
     }
 
     context = RequestContext(request, settings )
-
+    #reverse('wmd-settings-js')
     return HttpResponse(template.render(context),
             content_type="application/x-javascript")
 
