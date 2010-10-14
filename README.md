@@ -25,11 +25,13 @@ django-wmd-editor all you need to do is just follow these steps:
 
     INSTALLED_APPS = (
       ...
-      wmd',
+      'wmd',
       ...
     )
 
 4. Symlink or copy `~/django-wmd-editor/media/wmd` directory to where your `MEDIA_URL` directory is pointing to. django-wmd-editor will look for the /wmd path
+
+   4.1 In the wmd.js file, it explicitly looks to where you have the images in your project. By default I have this set to /static/wmd/images
 
 
 Usage
