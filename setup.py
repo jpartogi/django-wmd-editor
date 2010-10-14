@@ -1,4 +1,3 @@
-# $Id: setup.py 367a51c79b19 2009/08/22 13:58:55 jpartogi $
 #!/usr/bin/env python
 
 from distutils.core import setup
