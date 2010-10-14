@@ -34,7 +34,7 @@ Attacklab.wmdBase = function(){
 	// I've tried to localize the things you are likely to change to 
 	// this area.
 	// -------------------------------------------------------------------
-	
+
 	// The text that appears on the upper part of the dialog box when
 	// entering links.
 	var imageDialogText = "<p style='margin-top: 0px'><b>Enter the image URL.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://wmd-editor.com/images/cloud1.jpg   \"Optional title\"</p>";
@@ -46,7 +46,7 @@ Attacklab.wmdBase = function(){
 	var linkDefaultText = "http://";
 	
 	// The location of your button images relative to the base directory.
-	var imageDirectory = "images/";
+	var imageDirectory = "/static/wmd/images/";
 	
 	// Some intervals in ms.  These can be adjusted to reduce the control's load.
 	var previewPollInterval = 500;
@@ -2338,7 +2338,7 @@ Attacklab.wmdBase = function(){
 
 Attacklab.wmd_env = {};
 Attacklab.account_options = {};
-Attacklab.wmd_defaults = {version:1, output:"HTML", lineLength:40, delayLoad:false};
+Attacklab.wmd_defaults = {version:1, output:"markdown", lineLength:40, delayLoad:false};
 
 if(!Attacklab.wmd)
 {

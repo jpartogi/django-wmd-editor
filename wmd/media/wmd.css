@@ -26,8 +26,6 @@ body {
 
 #wmd-preview {
 	border: 1px dashed #999;
-    padding: 1%;
-    width: 48.5%;
 }
 
 #wmd-output {
@@ -125,3 +123,28 @@ body {
 	font-size: 0.8em;
 	font-weight: bold;
 }
+
+
+# django-wmd overrides to make admin interface look ok
+.wmd-panel {text-align: left;}
+.wmd-admin {
+    text-align: left;
+    margin-left: 105px;
+    width: 85%;
+}
+form #wmd-preview .wmd-admin code, form #wmd-preview .wmd-admin p,
+form #wmd-preview .wmd-admin h1, form #wmd-preview .wmd-admin h2,
+form #wmd-preview .wmd-admin h3, form #wmd-preview .wmd-admin h4,
+form #wmd-preview .wmd-admin h5, form #wmd-preview .wmd-admin h6,
+form #wmd-preview .wmd-admin ul, form #wmd-preview .wmd-admin ol {
+    margin-left: 0; padding-left: 5px;
+}
+form #wmd-preview .wmd-admin h1, form #wmd-preview .wmd-admin h2,
+form #wmd-preview .wmd-admin h3, form #wmd-preview .wmd-admin h4,
+form #wmd-preview .wmd-admin h5, form #wmd-preview .wmd-admin h6 {
+    background: none; color: #333;
+}
+
+form #wmd-preview .wmd-admin ul, form #wmd-preview .wmd-admin ol {margin-left: 2em;}
+form #wmd-preview .wmd-admin code, form #wmd-preview .wmd-admin pre {padding-left: 20px; background-color: #efefef; }
+form .wmd-admin p {margin-left: 0; padding-left: 5px;}
