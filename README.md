@@ -37,6 +37,14 @@ django-wmd-editor all you need to do is just follow these steps:
 
 4. Symlink or copy `~/django-wmd-editor/media/wmd` directory to where your `MEDIA_URL` directory is pointing to. django-wmd-editor will look for the /wmd path
 
+5. Add the urls to your urlconf:
+
+    urlpatterns = patterns('',
+      ...
+      (r'^wmd/', include('wmd.urls')),
+      ...
+    )
+
 
 Usage
 -----
