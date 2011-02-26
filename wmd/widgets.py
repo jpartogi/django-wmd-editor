@@ -28,9 +28,9 @@ class MarkDownInput(forms.Textarea):
         return mark_safe(u'\n'.join(html))
 
     def _media(self):
-        return forms.Media(css= {'screen': [settings.MEDIA_URL + "wmd/wmd.css"]},
-                           js=(settings.MEDIA_URL + "wmd/showdown.js",
-                               settings.MEDIA_URL + "wmd/wmd.js"))
+        return forms.Media(css= {'screen': [settings.STATIC_URL + "wmd/wmd.css"]},
+                           js=(settings.STATIC_URL + "wmd/showdown.js",
+                               settings.STATIC_URL + "wmd/wmd.js"))
 
     media = property(_media)
 
