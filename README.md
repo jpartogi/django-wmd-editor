@@ -12,16 +12,12 @@ Installing django-wmd-editor should be really as easy as possible. To install
 django-wmd-editor all you need to do is just follow these steps:
 
 1. Get django-wmd-editor
+    
+    1.1 pip install the lates version of django-wmd-editor from github
+    
+        $ pip install -e git://github.com/marcuswhybrow/django-wmd-editor.git#egg=django_wmd_editor
 
-   1.1 Checkout the latest revision of django-wmd-editor from github::
-
-        $ git clone git://github.com/madisona/django-wmd-editor.git
-
-   1.2 Or download the not so latest [django-wmd-editor from github][2]
-
-2. Put django-wmd-editor in your project folder
-
-3. Install django-wmd-editor in your django application::
+3. Install django-wmd-editor in your django application
 
     INSTALLED_APPS = (
       ...
@@ -29,33 +25,33 @@ django-wmd-editor all you need to do is just follow these steps:
       ...
     )
 
-4. Symlink or copy `~/django-wmd-editor/media/wmd` directory to where your `MEDIA_URL` directory is pointing to. django-wmd-editor will look for the /wmd path
+4. In the wmd.js file on line 49, it explicitly states where images are located in your project. By default this is set to "/static/wmd/images", you must change this if your static files are located elsewhere.
 
-   4.1 In the wmd.js file, it explicitly looks to where you have the images in your project. By default I have this set to /static/wmd/images
+    4.1 Run `python manage.py collectstatic` to collate the static files in all of your apps (including this one).
 
 
 Usage
 -----
 
-1. In your models:
+1. In your models
 
     from wmd import models as wmd_models
 
     description = wmd_models.MarkDownField()
 
-2. In your forms:
+2. In your forms
 
     from wmd.widgets import MarkDownInput
 
     description = forms.CharField(widget=MarkDownInput())
 
-3. You also need to add these lines on your template to load up the wmd static files:
+3. You also need to add these lines on your template to load the wmd static files.
    
     <head>
     {{ form.media }}
     </head>
    
-- In the admin, these static files is loaded automatically.
+- In the admin, these static files are loaded automatically.
 
 
 Configuration
@@ -84,5 +80,4 @@ Copyright (c) 2009 Scrum8 (http://scrum8.com) under BSD License.
 
 
   [1]: http://wmd-editor.com
-  [2]: http://github.com/madisona/django-wmd-editor/downloads
-  [3]: http://github.com/madisona/django-wmd-editor/issues
+  [3]: http://github.com/marcuswhybrow/django-wmd-editor/issues
