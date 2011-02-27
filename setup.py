@@ -1,4 +1,3 @@
-# $Id: setup.py 367a51c79b19 2009/08/22 13:58:55 jpartogi $
 #!/usr/bin/env python
 
 from distutils.core import setup
@@ -7,12 +6,12 @@ app_name = 'wmd'
 
 setup(name='django-%s-editor' % app_name,
         version='0.9.0',
-        packages=[app_name, '%s.templatetags' % app_name],
-        package_data = {app_name: ['templates/wmd.*', 'media/wmd/*.js', 'media/wmd/images/*.png']},
+        packages=[app_name],
+        package_data = {app_name: ['static/wmd/*.js', 'static/wmd/images/*.png']},
         author = 'Joshua Partogi',
         author_email = 'joshua.partogi@gmail.com',
-        url = 'http://github.com/scrum8/django-wmd-editor/',
-        download_url = 'http://github.com/scrum8/django-wmd-editor/archives/master/',
+        url = 'http://github.com/marcuswhybrow/django-wmd-editor/',
+        download_url = 'http://github.com/marcuswhybrow/django-wmd-editor/archives/master/',
 
         license = "BSD License",
         keywords = "django wmd editor",
