@@ -1,80 +1,91 @@
-body {
-	background-color: White
-}
 
 .wmd-panel {
-	margin-left: 25%;
-	margin-right: 25%;
-	width: 50%;
-	min-width: 500px;
+    min-width: 500px;
 }
 
 #wmd-editor {
-	background-color: none;
+    background-color: none;
 }
 
 #wmd-button-bar {
-	width: 100%;
+    background: #fff;
+    margin: 5px 0;
+    padding: 5px;
+}
+#wmd-button-bar:after {
+    clear: both;
+    content: '&nbsp;';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
 
 #wmd-input {
-	height: 500px;
-	width: 100%;
-	background-color: #efefef;
-	border: 1px solid DarkGray;
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid darkgray;
 }
 
-#wmd-preview {
-	border: 1px dashed #999;
-}
+#wmd-preview {}
 
 #wmd-output {
-	background-color: none;
+    background-color: none;
 }
 
 #wmd-button-row {
-	position: relative; 
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-top: 10px;
-	padding: 0px;  
-	height: 20px;
+    position: relative; 
+    margin: 0;
+    padding: 0px;  
+    height: 25px;
+    width: 100%;
+}
+#wmd-button-row:after {
+    clear: both;
+    content: '&nbsp;';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
 
 .wmd-spacer {
-	width: 1px; 
-	height: 20px; 
-	margin-left: 14px;
-	
-	position: absolute;
-	background-color: Silver;
-	display: inline-block; 
-	list-style: none;
+    width: 1px; 
+    height: 20px; 
+    margin-left: 14px;
+    position: absolute;
+    background-color: silver;
+    display: inline-block; 
+    list-style: none;
 }
 
 .wmd-button {
-	width: 20px; 
-	height: 20px; 
-	margin-left: 5px;
-	margin-right: 5px;
-	
-	position: absolute;
-	background-image: url(images/wmd-buttons.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	display: inline-block; 
-	list-style: none;
+    width: 20px; 
+    height: 20px; 
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    position: absolute;
+    background-image: url(images/wmd-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    display: inline-block; 
+    list-style: none;
 }
 
 .wmd-button > a {
-	width: 20px; 
-	height: 20px; 
-	margin-left: 5px;
-	margin-right: 5px;
-	
-	position: absolute;
-	display: inline-block; 
+    width: 20px; 
+    height: 20px; 
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    position: absolute;
+    display: inline-block; 
 }
 
 
@@ -98,34 +109,32 @@ body {
 
 
 .wmd-prompt-background {
-	background-color: Black;
+    background-color: #000;
 }
 
 .wmd-prompt-dialog {
-	border: 1px solid #999999;
-	background-color: #F5F5F5;
+    border: 1px solid #999;
+    background-color: #F5F5F5;
 }
 
 .wmd-prompt-dialog > div {
-	font-size: 0.8em;
-	font-family: arial, helvetica, sans-serif;
+    font-family: arial, helvetica, sans-serif;
 }
 
 
 .wmd-prompt-dialog > form > input[type="text"] {
-	border: 1px solid #999999;
-	color: black;
+    border: 1px solid #999;
+    color: black;
 }
 
 .wmd-prompt-dialog > form > input[type="button"]{
-	border: 1px solid #888888;
-	font-family: trebuchet MS, helvetica, sans-serif;
-	font-size: 0.8em;
-	font-weight: bold;
+    border: 1px solid #888;
+    font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 
-# django-wmd overrides to make admin interface look ok
+/* django-wmd overrides to make admin interface look ok */
 .wmd-panel {text-align: left;}
 .wmd-admin {
     text-align: left;
