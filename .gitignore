@@ -1,3 +1,4 @@
 *.pyc
 *.pyo
 .idea/*
+django_wmd_editor.egg-info
