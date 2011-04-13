@@ -2,12 +2,10 @@
 
 from distutils.core import setup
 
-app_name = 'wmd'
-
-setup(name='django-%s-editor' % app_name,
+setup(name='django-wmd-editor',
         version='0.9.0',
         packages=[app_name],
-        package_data = {app_name: ['static/wmd/*.js', 'static/wmd/images/*.png']},
+        package_data = {app_name: ['static/wmd/*.js', 'static/wmd/*.css', 'static/wmd/images/*.png']},
         author = 'Joshua Partogi',
         author_email = 'joshua.partogi@gmail.com',
         url = 'http://github.com/marcuswhybrow/django-wmd-editor/',
