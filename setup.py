@@ -2,7 +2,9 @@
 
 from distutils.core import setup
 
-setup(name='django-wmd-editor',
+app_name = 'wmd'
+
+setup(name='django-%s-editor' % app_name,
         version='0.9.0',
         packages=[app_name],
         package_data = {app_name: ['static/wmd/*.js', 'static/wmd/*.css', 'static/wmd/images/*.png']},
