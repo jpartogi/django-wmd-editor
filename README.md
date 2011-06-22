@@ -35,18 +35,25 @@ django-wmd-editor all you need to do is just follow these steps:
 Usage
 -----
 
-1. In your models
- 	from wmd import models as wmd_models
- 	description = wmd_models.MarkDownField()
-2. In your forms
- 	from wmd.widgets import MarkDownInput
+1. In your models:
+
+	from wmd import models as wmd_models
+	description = wmd_models.MarkDownField()
+
+2. In your forms:
+
+	from wmd.widgets import MarkDownInput
 	description = forms.CharField(widget=MarkDownInput())
- __Note:__ Use `forms.CharField(widget=AdminMarkDownInput())` if you want the "preview" functionality to work in the admin.
-3. You also need to add these lines on your template to load the wmd static files.
- 	<head>
- 		{{ form.media }}
- 	</head>
- __Note:__ In the admin, these static files are loaded automatically.
+
+__Note:__ Use `forms.CharField(widget=AdminMarkDownInput())` if you want the "preview" functionality to work in the admin.
+
+3. You also need to add these lines on your template to load the wmd static files:
+
+	<head>
+		{{ form.media }}
+	</head>
+
+__Note:__ In the admin, these static files are loaded automatically.
 
 Configuration
 -------------
