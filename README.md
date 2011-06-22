@@ -31,14 +31,6 @@ django-wmd-editor all you need to do is just follow these steps:
 
     Run `python manage.py collectstatic` to collect the static files in all of your apps (including this one).
 
-5. Add the urls to your `urls.py`:
-
-        urlpatterns = patterns('',
-          ...
-          (r'^wmd/', include('wmd.urls')),
-          ...
-        )
-
 
 Usage
 -----
