@@ -81,6 +81,6 @@ Copyright &copy; 2009 Scrum8 (<http://scrum8.com>), 2011 Marcus Whybrow under BS
 
 
   [1]: http://wmd-editor.com
-  [2]: http://github.com/scrum8/django-wmd-editor/downloads
-  [3]: http://github.com/scrum8/django-wmd-editor/issues
+  [2]: http://github.com/jpartogi/django-wmd-editor/downloads
+  [3]: http://github.com/jpartogi/django-wmd-editor/issues
 
