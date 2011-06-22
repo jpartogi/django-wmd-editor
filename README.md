@@ -47,13 +47,15 @@ Usage
 
         description = forms.CharField(widget=MarkDownInput())
 
+__Note:__ Use `forms.CharField(widget=AdminMarkDownInput())` if you want the "preview" functionality to work in the admin.
+
 3. You also need to add these lines on your template to load the wmd static files.
    
         <head>
         {{ form.media }}
         </head>
    
-- In the admin, these static files are loaded automatically.
+__Note:__ In the admin, these static files are loaded automatically.
 
 
 Configuration

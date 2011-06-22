@@ -53,7 +53,7 @@ Attacklab.wmdBase = function(){
 	var pastePollInterval = 100;
 	
 	// The link and title for the help button
-	var helpLink = "http://wmd-editor.com/";
+	var helpLink = "http://daringfireball.net/projects/markdown/syntax";
 	var helpHoverTitle = "WMD website";
 	var helpTarget = "_blank";
 	
