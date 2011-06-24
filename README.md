@@ -31,38 +31,27 @@ django-wmd-editor all you need to do is just follow these steps:
 
     Run `python manage.py collectstatic` to collect the static files in all of your apps (including this one).
 
-5. Add the urls to your `urls.py`:
-
-        urlpatterns = patterns('',
-          ...
-          (r'^wmd/', include('wmd.urls')),
-          ...
-        )
-
 
 Usage
 -----
 
-1. In your models
+1. In your models:
 
-        from wmd import models as wmd_models
+	    from wmd import models as wmd_models
+	    description = wmd_models.MarkDownField()
 
-        description = wmd_models.MarkDownField()
+2. In your forms:
 
-2. In your forms
+	    from wmd.widgets import MarkDownInput
+	    description = forms.CharField(widget=MarkDownInput())
+	__Note:__ Use `forms.CharField(widget=AdminMarkDownInput())` if you want the "preview" functionality to work in the admin.
 
-        from wmd.widgets import MarkDownInput
+3. You also need to add these lines on your template to load the wmd static files:
 
-        description = forms.CharField(widget=MarkDownInput())
-
-3. You also need to add these lines on your template to load the wmd static files.
-   
-        <head>
-        {{ form.media }}
-        </head>
-   
-- In the admin, these static files are loaded automatically.
-
+	    <head>
+	    	{{ form.media }}
+	    </head>
+	__Note:__ In the admin, these static files are loaded automatically.
 
 Configuration
 -------------
@@ -89,6 +78,6 @@ Copyright &copy; 2009 Scrum8 (<http://scrum8.com>), 2011 Marcus Whybrow under BS
 
 
   [1]: http://wmd-editor.com
-  [2]: http://github.com/scrum8/django-wmd-editor/downloads
-  [3]: http://github.com/scrum8/django-wmd-editor/issues
+  [2]: http://github.com/jpartogi/django-wmd-editor/downloads
+  [3]: http://github.com/jpartogi/django-wmd-editor/issues
 
