@@ -1,159 +1,176 @@
+@charset "UTF-8";
+
+/*
+** 
+** Styles for django-wmd-editor.
+** https://github.com/jpartogi/django-wmd-editor
+** 
+** Changelog:
+** 
+** 2011/06/22
+**      * Cleaned styles and fixed a few errors.
+**      * Micky Hulse (hulse.me).
+** 
+*/
 
 .wmd-panel {
-    min-width: 500px;
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	min-width: 500px;
 }
-
-#wmd-editor {
-    background-color: none;
-}
-
-#wmd-button-bar {
-    background: #fff;
-    margin: 5px 0;
-    padding: 5px;
-}
-#wmd-button-bar:after {
-    clear: both;
-    content: '&nbsp;';
-    display: block;
-    font-size: 0;
-    line-height: 0;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-
+#wmd-editor { background-color: none; }
+#wmd-button-bar { width: 100%; }
 #wmd-input {
-    height: 500px;
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid darkgray;
+	height: 500px;
+	width: 100%;
+	background-color: #efefef;
+	border: 1px solid #999;
 }
-
-#wmd-preview {}
-
-#wmd-output {
-    background-color: none;
-}
-
+#wmd-preview { border: 1px dashed #999; }
+#wmd-output { background-color: none; }
 #wmd-button-row {
-    position: relative; 
-    margin: 0;
-    padding: 0px;  
-    height: 25px;
-    width: 100%;
+	position: relative;
+	height: 20px;
+	margin: 10px 5px 5px;
+	padding: 0;
 }
-#wmd-button-row:after {
-    clear: both;
-    content: '&nbsp;';
-    display: block;
-    font-size: 0;
-    line-height: 0;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-
+#wmd-button-row li { list-style: none; }
 .wmd-spacer {
-    width: 1px; 
-    height: 20px; 
-    margin-left: 14px;
-    position: absolute;
-    background-color: silver;
-    display: inline-block; 
-    list-style: none;
+	width: 1px;
+	height: 20px;
+	margin-left: 14px;
+	background-color: #ccc;
+	position: absolute;
+	display: inline-block;
 }
-
 .wmd-button {
-    width: 20px; 
-    height: 20px; 
-    margin-left: 5px;
-    margin-right: 5px;
-    
-    position: absolute;
-    background-image: url(images/wmd-buttons.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    display: inline-block; 
-    list-style: none;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	background-image: url(images/wmd-buttons.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	display: inline-block;
 }
-
 .wmd-button > a {
-    width: 20px; 
-    height: 20px; 
-    margin-left: 5px;
-    margin-right: 5px;
-    
-    position: absolute;
-    display: inline-block; 
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	position: absolute;
+	display: inline-block;
 }
-
-
-/* sprite button slicing style information */
-#wmd-button-bar #wmd-bold-button    {left: 0px;   background-position: 0px 0;}
-#wmd-button-bar #wmd-italic-button  {left: 25px;  background-position: -20px 0;}
-#wmd-button-bar #wmd-spacer1        {left: 50px;}
-#wmd-button-bar #wmd-link-button    {left: 75px;  background-position: -40px 0;}
-#wmd-button-bar #wmd-quote-button   {left: 100px;  background-position: -60px 0;}
-#wmd-button-bar #wmd-code-button    {left: 125px;  background-position: -80px 0;}
-#wmd-button-bar #wmd-image-button   {left: 150px;  background-position: -100px 0;}
-#wmd-button-bar #wmd-spacer2        {left: 175px;}
-#wmd-button-bar #wmd-olist-button   {left: 200px;  background-position: -120px 0;}
-#wmd-button-bar #wmd-ulist-button   {left: 225px; background-position: -140px 0;}
-#wmd-button-bar #wmd-heading-button {left: 250px; background-position: -160px 0;}
-#wmd-button-bar #wmd-hr-button      {left: 275px; background-position: -180px 0;}
-#wmd-button-bar #wmd-spacer3        {left: 300px;}
-#wmd-button-bar #wmd-undo-button    {left: 325px; background-position: -200px 0;}
-#wmd-button-bar #wmd-redo-button    {left: 350px; background-position: -220px 0;}
-#wmd-button-bar #wmd-help-button    {right: 0px; background-position: -240px 0;}
-
-
-.wmd-prompt-background {
-    background-color: #000;
+/* Sprite button slicing style information: */
+#wmd-bold-button { left: 0; }
+#wmd-italic-button  {
+	left: 25px;
+	background-position: -20px 0;
 }
-
+#wmd-spacer1 { left: 50px; }
+#wmd-link-button {
+	left: 75px;
+	background-position: -40px 0;
+}
+#wmd-quote-button {
+	left: 100px;
+	background-position: -60px 0;
+}
+#wmd-code-button {
+	left: 125px;
+	background-position: -80px 0;
+}
+#wmd-image-button {
+	left: 150px;
+	background-position: -100px 0;
+}
+#wmd-spacer2 {
+	left: 175px;
+}
+#wmd-olist-button {
+	left: 200px;
+	background-position: -120px 0;
+}
+#wmd-ulist-button {
+	left: 225px;
+	background-position: -140px 0;
+}
+#wmd-heading-button {
+	left: 250px;
+	background-position: -160px 0;
+}
+#wmd-hr-button {
+	left: 275px;
+	background-position: -180px 0;
+}
+#wmd-spacer3 { left: 300px; }
+#wmd-undo-button {
+	left: 325px;
+	background-position: -200px 0;
+}
+#wmd-redo-button {
+	left: 350px;
+	background-position: -220px 0;
+}
+#wmd-help-button {
+	right: 0;
+	background-position: -240px 0;
+}
+.wmd-prompt-background { background-color: #000; }
 .wmd-prompt-dialog {
-    border: 1px solid #999;
-    background-color: #F5F5F5;
+	border: 1px solid #999;
+	background: #f5f5f5;
 }
-
-.wmd-prompt-dialog > div {
-    font-family: arial, helvetica, sans-serif;
-}
-
-
+.wmd-prompt-dialog > div { font: .8em arial, helvetica, sans-serif; }
 .wmd-prompt-dialog > form > input[type="text"] {
-    border: 1px solid #999;
-    color: black;
+	border: 1px solid #999;
+	color: #000;
 }
-
 .wmd-prompt-dialog > form > input[type="button"]{
-    border: 1px solid #888;
-    font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: bold;
+	font: bold .8em "trebuchet MS", helvetica, sans-serif;
+	border: 1px solid #888;
 }
 
+/*
+** 
+** Some django-wmd overrides to make admin interface look ok:
+** 
+*/
 
-/* django-wmd overrides to make admin interface look ok */
-.wmd-panel {text-align: left;}
-.wmd-admin {
-    text-align: left;
-    margin-left: 105px;
-    width: 85%;
+.wmd-panel { text-align: left; }
+.wmd-admin { margin-top: 1em; }
+.wmd-admin #wmd-preview { padding: 1em; }
+.wmd-admin #wmd-preview hr {
+	border: 0;
+	border-top: 1px solid #666;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0;
+	display: block;
 }
-form #wmd-preview .wmd-admin code, form #wmd-preview .wmd-admin p,
-form #wmd-preview .wmd-admin h1, form #wmd-preview .wmd-admin h2,
-form #wmd-preview .wmd-admin h3, form #wmd-preview .wmd-admin h4,
-form #wmd-preview .wmd-admin h5, form #wmd-preview .wmd-admin h6,
-form #wmd-preview .wmd-admin ul, form #wmd-preview .wmd-admin ol {
-    margin-left: 0; padding-left: 5px;
+.wmd-admin #wmd-preview ul,
+.wmd-admin #wmd-preview ol {
+	margin-left: 0;
+	padding-left: 5px;
 }
-form #wmd-preview .wmd-admin h1, form #wmd-preview .wmd-admin h2,
-form #wmd-preview .wmd-admin h3, form #wmd-preview .wmd-admin h4,
-form #wmd-preview .wmd-admin h5, form #wmd-preview .wmd-admin h6 {
-    background: none; color: #333;
+.wmd-admin #wmd-preview h1,
+.wmd-admin #wmd-preview h2,
+.wmd-admin #wmd-preview h3,
+.wmd-admin #wmd-preview h4,
+.wmd-admin #wmd-preview h5,
+.wmd-admin #wmd-preview h6 {
+	color: #333;
+	background: none;
+	margin: .5em 0;
+	padding: 0;
 }
-
-form #wmd-preview .wmd-admin ul, form #wmd-preview .wmd-admin ol {margin-left: 2em;}
-form #wmd-preview .wmd-admin code, form #wmd-preview .wmd-admin pre {padding-left: 20px; background-color: #efefef; }
-form .wmd-admin p {margin-left: 0; padding-left: 5px;}
+.wmd-admin #wmd-preview ul,
+.wmd-admin #wmd-preview ol { margin-left: 2em; }
+.wmd-admin #wmd-preview code,
+.wmd-admin #wmd-preview pre {
+	padding-left: 20px;
+	background-color: #efefef;
+}
+.wmd-admin #wmd-preview p {
+	margin-left: 0;
+	padding-left: 5px;
+}
