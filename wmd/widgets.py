@@ -1,7 +1,10 @@
 
 from django import forms
 from django.conf import settings
-from django.forms.util import flatatt
+try:
+    from django.forms.utils import flatatt # Renamed in Django 1.7
+except ImportError:
+    from django.forms.util import flatatt # Removed in Django 1.9
 from django.utils.html import escape
 from django.utils.encoding import force_unicode
 from django.utils.safestring import mark_safe
